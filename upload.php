@@ -4,7 +4,7 @@ $targetFile = $targetDir . basename($_FILES["file"]["name"]);
 $uploadOk = 1;
 
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile)) {
-    $conn = new mysqli("localhost", "root", "", "file_upload");
+    $conn = new mysqli("file_upload.sql");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
