@@ -15,7 +15,7 @@
     <h1>Download Files</h1>
     <ul>
         <?php
-        $conn = new mysqli("localhost", "root", "", "file_upload");
+        $conn = new mysqli("file_upload.sql");
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
